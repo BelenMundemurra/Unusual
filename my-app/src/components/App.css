@@ -1,9 +1,12 @@
 .title-section {
-    background-color: rgb(179, 172, 172);
-    height: 94vh;
+    background-color: rgba(179, 172, 172, 0.145);
 }
 
 .cart_style {
     padding: 0.5%;
     width: 2.5vw;
+}
+
+.card-body button{
+    margin: 2px;
 }

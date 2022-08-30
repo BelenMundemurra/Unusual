@@ -8,6 +8,7 @@ const App = () => {
         <>
             <Navbar/>
             <ItemListContainer name={"Dev"} />
+
         </>
     );
 }
