@@ -1,9 +1,6 @@
 import {React, useState, useEffect} from 'react';
-
-const productos = [
-    {nombre: "Remera", talle: "1", precio: 200, stock: 15},
-    {nombre: "Pollera", talle: "2", precio: 400, stock: 30}
-]
+import productos from './Item';
+import ItemCount from './ItemCount';
 
 function consultarPromesa(confirmacion) {
     return new Promise ((res,rej) => {
@@ -15,18 +12,21 @@ function consultarPromesa(confirmacion) {
     })
 }
 
-const Productos = () => {
+const ItemList = () => {
 
     const [productos, setProductos] = useState([]);
 
     useEffect(() => {
         consultarPromesa(true)
         .then(data => {
-            const productosJSX = data.map((producto, indice) => 
-                <div className="card" key={indice} style={{width: '18rem'}}>
+            const productosJSX = data.map((producto, indice) =>
+                <div className="card text-center" key={indice} style={{width: '18rem'}}>
+                    <img src={producto.img} className="card-img-top"></img>
                     <div className="card-body">
-                        <h5 className="card-title">Nombre: {producto.nombre}</h5>
-                        <p className="card-text">a</p>
+                        <h5 className="card-title">{producto.nombre}</h5>
+                        <p className="card-text">{producto.descrip}</p>
+                        <p className="card-text">${producto.precio}</p>
+                        <ItemCount stock={producto.stock}/>
                     </div>
                 </div>
             )
@@ -44,4 +44,4 @@ const Productos = () => {
     );
 }
 
-export default Productos;
+export default ItemList;

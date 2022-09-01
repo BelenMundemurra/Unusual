@@ -19,17 +19,13 @@ const ItemCount = ({stock, onAdd}) => {
 
     return (
         <>
-        <div className="card">
-            <div className="card-header">
-                Producto
-            </div>
-            <div className="card-body">
-                <h5 className="card-title">Stock: {stock}</h5>
-                <p className="card-text">Cantidad: {cont}</p>
-                <button className="btn btn-primary" onClick={() => sum()}>+</button>
-                <button className="btn btn-primary" onClick={() => rest()}>-</button> 
-                <button className="btn btn-primary" onClick={() => onAdd(cont)}>Confirmar</button>
-            </div>
+        <div className="card-count">
+                <p>Stock disponible {stock}</p>
+                <p>Cantidad {cont}</p>
+                <div className='btn-count'>
+                    <button onClick={() => sum()}>+</button>
+                    <button onClick={() => rest()}>-</button> 
+                </div>
         </div>
         </>
     );
