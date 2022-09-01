@@ -1,5 +1,6 @@
 import React from 'react';
-import ItemCount from './itemCount';
+import ItemCount from './ItemCount';
+import Productos from './ItemList';
 
 const ItemListContainer = ({name}) => {
 
@@ -11,6 +12,7 @@ const ItemListContainer = ({name}) => {
         <section className='title-section container-fluid'>
             <h1>Bienvenid@ {name}</h1>
             <ItemCount stock={15} onAdd={onAdd}/>
+            <Productos/>
         </section>
         </>
     );

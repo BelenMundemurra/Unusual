@@ -1,6 +1,6 @@
 import React from 'react';
 import CartWidget from './CartWidget';
-import Form from './form';
+import Form from './Form';
 
 function Navbar() {
   return (
