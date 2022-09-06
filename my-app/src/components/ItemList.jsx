@@ -1,25 +1,10 @@
 import {React, useState, useEffect} from 'react';
-import productos from './Item';
 import ItemCount from './ItemCount';
-
-function consultarPromesa(confirmacion) {
-    return new Promise ((res,rej) => {
-        if (confirmacion) {
-            res(productos)
-        } else {
-            rej("Acceso denegado")
-        }
-    })
-}
-
+import ListaProductos from './Item';
 const ItemList = () => {
-
     const [productos, setProductos] = useState([]);
-
     useEffect(() => {
-        consultarPromesa(true)
-        .then(data => {
-            const productosJSX = data.map((producto, indice) =>
+            const productosJSX = ListaProductos.map((producto, indice) =>
                 <div className="card text-center" key={indice} style={{width: '18rem'}}>
                     <img src={producto.img} className="card-img-top"></img>
                     <div className="card-body">
@@ -31,10 +16,6 @@ const ItemList = () => {
                 </div>
             )
             setProductos(productosJSX)
-        })
-        .catch(error => {
-            console.error(error)
-        })
     }, []);
 
     return (
@@ -45,3 +26,5 @@ const ItemList = () => {
 }
 
 export default ItemList;
+
+

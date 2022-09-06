@@ -1,6 +1,5 @@
 import React from 'react';  
 import ItemList from './ItemList';
-import Productos from './ItemList';
 
 const ItemListContainer = ({name}) => {
     return (
