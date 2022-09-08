@@ -2,7 +2,7 @@ import {React, useState, useEffect} from 'react';
 import {products} from './mock/products';
 import ItemList from './ItemList';
 
-const ItemListContainer = ({name}) => {
+const ItemListContainer = () => {
 
     const [productsList, setProductos] = useState([]);
 
@@ -25,7 +25,7 @@ const ItemListContainer = ({name}) => {
     return (
         <>
             <section className='title-section container-fluid'>
-                <h1>Bienvenid@ {name}</h1>
+                <h1>Bienvenid@</h1>
                 <ItemList productsList={productsList}/>
             </section>
         </>

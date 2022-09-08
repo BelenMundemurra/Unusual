@@ -1,34 +1,24 @@
 import React from 'react';
 import CartWidget from './CartWidget';
 import Form from './Form';
+import {Link} from 'react-router-dom';
 
 function Navbar() {
   return (
     <>
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <div className="container-fluid">
-          <a className="navbar-brand" href="#">SUNDAE</a>
+          <Link className="navbar-brand" to="/">SUNDAE</Link>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon" />
           </button>
           <div className="collapse navbar-collapse" id="navbarColor03">
             <ul className="navbar-nav me-auto">
               <li className="nav-item">
-                <a className="nav-link active" href="#">Inicio
-                </a>
+                <Link className="nav-link active" to="/">Inicio</Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">Sobre Nosotros</a>
-              </li>
-              <li className="nav-item dropdown">
-                <a className="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Tienda</a>
-                <div className="dropdown-menu">
-                  <a className="dropdown-item" href="#">Remeras</a>
-                  <a className="dropdown-item" href="#">Polleras</a>
-                  <a className="dropdown-item" href="#">Buzos</a>
-                  <div className="dropdown-divider" />
-                  <a className="dropdown-item" href="#">Accesorios</a>
-                </div>
+                <Link className="nav-link" to="/category/shop">Tienda</Link>
               </li>
             </ul>
             <Form contBuscar="Productos"/>
