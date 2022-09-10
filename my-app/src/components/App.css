@@ -20,3 +20,13 @@
     margin: 10px;
     width: 2vw;
 }
+
+.darkMode {
+    background-color: black;
+    color: antiquewhite;
+}
+
+.lightMode {
+    background-color: white;
+    color: black;
+}

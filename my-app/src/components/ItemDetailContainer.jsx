@@ -30,7 +30,7 @@ const ItemDetailContainer = () => {
         <>
             <section className='title-section container-fluid'>
                 <h1>Detalle del producto</h1>
-                {itemList.map((el) => <ItemDetail key={el.id} img={el.img} title={el.name} price={el.price} descrip={el.descrip} stock={el.stock}/>)}
+                {itemList.map((el) => <ItemDetail key={el.id} el={el} />)}
             </section>
         </>
     );

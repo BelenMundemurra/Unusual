@@ -1,10 +1,7 @@
 import {React, useState} from 'react';
 
-const ItemCount = ({stock, onAdd}) => {
-
+const ItemCount = ({stock,setCont,cont}) => {
     //Consultar estado del contador SET => Modificar GET => Consultar
-    const [cont, setCont] = useState(0);
-
     function sum() {
         if (cont < stock) {
             setCont(cont + 1)
@@ -12,7 +9,7 @@ const ItemCount = ({stock, onAdd}) => {
     }
 
     function rest() {
-        if (cont > 0) {
+        if (cont > 1) {
             setCont(cont - 1)
         }
     }
@@ -30,5 +27,4 @@ const ItemCount = ({stock, onAdd}) => {
         </>
     );
 }
-
 export default ItemCount;
