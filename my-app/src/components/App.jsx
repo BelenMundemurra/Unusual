@@ -6,19 +6,21 @@ import ItemListContainer from './ItemListContainer';
 import ItemDetailContainer from './ItemDetailContainer';
 import Error404 from './Error404';
 import Cart from './Cart';
-
+import {CartProvider} from './context/CartContext';
 const App = () => {
     return (
         <>
             <BrowserRouter>
-                <Navbar/>
-                <Routes>
-                    <Route path='/' element={<ItemListContainer/>} ></Route>
-                    <Route path='/category/shop' element={<ItemListContainer/>} ></Route>
-                    <Route path='/item/:id' element={<ItemDetailContainer/>} ></Route>
-                    <Route path='/cart' element={<Cart/>} ></Route>
-                    <Route path='*' element={<Error404/>} ></Route>
-                </Routes>
+                <CartProvider>
+                    <Navbar/>
+                    <Routes>
+                        <Route path='/' element={<ItemListContainer/>} />
+                        <Route path='/category/shop' element={<ItemListContainer/>} />
+                        <Route path='/item/:id' element={<ItemDetailContainer/>} />
+                        <Route path='/cart' element={<Cart/>} />
+                        <Route path='*' element={<Error404/>} />
+                    </Routes>
+                </CartProvider>
             </BrowserRouter>
         </>
     );

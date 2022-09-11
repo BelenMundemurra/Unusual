@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { CartProvider } from './context/CartContext';
 const Cart = () => {
     return (
         <>
