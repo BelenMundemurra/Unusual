@@ -27,9 +27,17 @@ export const CartProvider = ({children}) => {
     //Mostrar carrito en consola
     console.log(cart)
 
+    //Total precio
+    //Resultado se acumula en prev
+    const totalPrice = () => {
+        return cart.reduce((prev,act) => prev + act.amount * act.item.price,0);
+    }
+
+    //Total productos
+    const totalProducts = () => cart.reduce((acumulador, productActual) => acumulador + productActual.amount, 0);
     return (
         <>
-        <CartContext.Provider value={{addItem,removeItem,isInCart,clearCart}}>
+        <CartContext.Provider value={{addItem,removeItem,isInCart,clearCart,totalPrice,totalProducts,cart}}>
             {children}
         </CartContext.Provider>
         </>
