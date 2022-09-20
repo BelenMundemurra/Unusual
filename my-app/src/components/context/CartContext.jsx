@@ -15,7 +15,7 @@ export const CartProvider = ({children}) => {
 
     //Eliminar un producto
     const removeItem = (id) => {
-        setCart(cart.filter(product => product.id !== id));
+        setCart(cart.filter(product => product.item.id !== id));
     }
 
     //Averiguar si esta en el carrito

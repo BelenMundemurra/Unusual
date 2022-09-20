@@ -12,7 +12,7 @@ const ItemCart = ({product}) => {
                 <p className="card-text">Cantidad: {product.amount}</p>
                 <p className="card-text">Precio unidad: ${product.item.price}</p>
                 <p className="card-text">Precio Total: ${product.amount * product.item.price}</p>
-                <button className="btn btn-primary" onClick={() => removeItem(product.id)}>Eliminar</button>
+                <button className="btn btn-primary" onClick={() => removeItem(product.item.id)}>Eliminar</button>
             </div>
         </div>
         </>
