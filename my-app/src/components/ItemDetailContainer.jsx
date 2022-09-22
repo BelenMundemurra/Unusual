@@ -1,36 +1,35 @@
 import {React, useState, useEffect} from 'react';  
-import {products} from './mock/products';
 import ItemDetail from './ItemDetail';
 import {useParams} from 'react-router';
+import { collection, doc,getDoc} from 'firebase/firestore';
+import {db} from './services/firebase';
 
 const ItemDetailContainer = () => {
     const [itemList, setItem] = useState([]);
-    const getItem = (confirm) => {
-        return new Promise ((res,rej) => {
-            if (confirm) {
-                res(productItem)
-            } else {
-                rej("Acceso denegado")
-            }
-        })
-    }
 
     let {id} = useParams();
-    const productItem = products.filter(el => el.id == id)
+
+    const getSelected = async (idItem) => {
+        try {
+            const document = collection(db,"ItemCollection",idItem)
+            const response = await getDoc(document)
+            const result = {id: response.id, ...response.data()}
+            setItem(result)
+        } catch(error) {
+            console.log(error)
+        }
+    }
 
     useEffect(() => {
-        getItem(true)
-        .then (productItem => setItem(productItem))
-        .catch(error => console.error(error))
+        getSelected(id)
     }, []);
-
     
-
+    
     return (
         <>
             <section className='title-section container-fluid'>
                 <h1>Detalle del producto</h1>
-                {itemList.map((el) => <ItemDetail key={el.id} el={el} />)}
+                <ItemDetail key={id} el={setItem} />
             </section>
         </>
     );

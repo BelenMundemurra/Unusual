@@ -1,7 +1,6 @@
 import React from 'react';
 import { useCartContext } from './context/CartContext';
 import {Link} from 'react-router-dom';
-import { products } from './mock/products';
 import ItemCart from './ItemCart';
 
 const Cart = () => {
