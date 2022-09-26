@@ -6,7 +6,7 @@ import ItemCart from './ItemCart';
 const Cart = () => {
     const {cart,totalPrice} = useCartContext();
     
-    if (cart.lenght === 0) {
+    if (cart.length === 0) {
         return (
             <>
             <p>Carrito vacio</p>
@@ -21,8 +21,6 @@ const Cart = () => {
             </>
         )
     }
-
-
 }
 
 export default Cart;
