@@ -7,6 +7,7 @@ import ItemDetailContainer from './ItemDetailContainer';
 import Error404 from './Error404';
 import Cart from './Cart';
 import {CartProvider} from './context/CartContext';
+import Checkout from './Checkout';
 const App = () => {
     return (
         <>
@@ -18,6 +19,7 @@ const App = () => {
                         <Route path='/category/shop' element={<ItemListContainer/>} />
                         <Route path='/item/:id' element={<ItemDetailContainer/>} />
                         <Route path='/cart' element={<Cart/>} />
+                        <Route path='/checkout' element={<Checkout/>} />
                         <Route path='*' element={<Error404/>} />
                     </Routes>
                 </CartProvider>
