@@ -18,26 +18,50 @@ const ItemDetail = () => {
 
     const [cont, setCont] = useState(1);
     //Context
-    const {addItem} = useCartContext();
+    const {addItem, cart} = useCartContext();
 
     function onAdd(el,amount) {
         addItem(el , amount);
     } 
-    
-    return (
-        
-        <div className="card text-center" style={{width: '18rem'}}>
-            <img src={data.img} className="card-img-top"></img>
-            <div className="card-body">
-                <h5 className="card-title">{data.title}</h5>
-                <p className="card-text">${data.price}</p>
-                <p>{data.descrip}</p>
-                <ItemCount stock={data.stock} setCont={setCont} cont={cont}/>
-                <Link className="btn" to="/cart" onClick={() => onAdd(data,cont)}>Comprar</Link>
-            </div>
-        </div>
-    ) 
-    
+
+    //Ver si el producto existe en el carrito
+    if (cart.some((el) => el.item.id === data.id)) {
+        return (
+            //Existe el producto en el carrito
+            <>
+                <div className="card text-center" style={{width: '18rem'}}>
+                    <img src={data.img} className="card-img-top"></img>
+                    <div className="card-body">
+                        <h5 className="card-title">{data.name}</h5>
+                        <p className="card-text">${data.price}</p>
+                        <p>{data.descrip}</p>
+                    </div>
+                    <div>
+                        <p>Producto agregado al carrito</p>
+                        <Link to="/cart">Ir al carrito</Link>
+                    </div>
+                </div>
+            </>
+        );
+    } else {
+        return (
+            //No existe el producto en el carrito
+            <>
+                <div className="card text-center" style={{width: '18rem'}}>
+                    <img src={data.img} className="card-img-top"></img>
+                    <div className="card-body">
+                        <h5 className="card-title">{data.name}</h5>
+                        <p className="card-text">${data.price}</p>
+                        <p>{data.descrip}</p>
+                    </div>
+                    <div>
+                        <ItemCount stock={data.stock} setCont={setCont} cont={cont}/>
+                        <button onClick={() => onAdd(data,cont)}>Comprar</button>
+                    </div>
+                </div>
+            </>
+        )
+    }
 }
 
 
