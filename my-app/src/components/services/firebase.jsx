@@ -1,4 +1,5 @@
 // Import the functions you need from the SDKs you need
+import 'dotenv/config'
 import { initializeApp } from "firebase/app";
 import {getFirestore} from "firebase/firestore";
 // TODO: Add SDKs for Firebase products that you want to use
@@ -6,7 +7,7 @@ import {getFirestore} from "firebase/firestore";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-    apiKey: "AIzaSyDdonQxnOkoxDqvFpZtV2c7iE85RZ6b5qQ",
+    apiKey: process.env.API_KEY,
     authDomain: "ecommerce-react---coderhouse.firebaseapp.com",
     projectId: "ecommerce-react---coderhouse",
     storageBucket: "ecommerce-react---coderhouse.appspot.com",
