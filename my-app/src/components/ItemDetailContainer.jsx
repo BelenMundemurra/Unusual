@@ -1,7 +1,7 @@
 import {React, useState, useEffect} from 'react';  
 import ItemDetail from './ItemDetail';
 import {useParams} from 'react-router';
-import { collection, doc,getDoc} from 'firebase/firestore';
+import { collection,getDoc} from 'firebase/firestore';
 import {db} from './services/firebase';
 
 const ItemDetailContainer = () => {
@@ -20,6 +20,7 @@ const ItemDetailContainer = () => {
         }
     }
 
+    console.log(setItem)
     useEffect(() => {
         getSelected(id)
     }, []);

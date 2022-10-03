@@ -25,7 +25,7 @@ export const CartProvider = ({children}) => {
     const clearCart = () => setCart([]); 
 
     //Mostrar carrito en consola
-    console.log(cart)
+    //console.log(cart)
 
     //Total precio
     //Resultado se acumula en prev
