@@ -1,13 +1,14 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import {BrowserRouter,Routes,Route} from 'react-router-dom'
-import './App.css';
+import '../style/styles.css';
 import Navbar from "./Navbar";
-import ItemListContainer from './ItemListContainer';
-import ItemDetailContainer from './ItemDetailContainer';
+import ItemListContainer from './ItemContainerComponents/ItemListContainer';
+import ItemDetailContainer from './ItemDetailComponents/ItemDetailContainer';
 import Error404 from './Error404';
-import Cart from './Cart';
+import Cart from './CartComponents/Cart';
 import {CartProvider} from './context/CartContext';
-import Checkout from './Checkout';
+import Checkout from './CartComponents/Checkout';
+import Home from './Home/Home';
 const App = () => {
     return (
         <>
@@ -15,7 +16,7 @@ const App = () => {
                 <CartProvider>
                     <Navbar/>
                     <Routes>
-                        <Route path='/' element={<ItemListContainer/>} />
+                        <Route path='/' element={<Home/>} />
                         <Route path='/category/shop' element={<ItemListContainer/>} />
                         <Route path='/item/:id' element={<ItemDetailContainer/>} />
                         <Route path='/cart' element={<Cart/>} />

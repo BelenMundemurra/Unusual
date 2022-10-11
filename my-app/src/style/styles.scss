@@ -1,0 +1,76 @@
+    //Fuentes
+    $color-font: #494949;
+    $font-text:'Roboto', sans-serif;
+    $color-font-news:#FFFF; //Thin 100 - Light 300  
+
+    //Imports Google Fonts
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+    //Estilos Generales
+    body {
+        color: $color-font;
+        font-family: $font-text;
+    }
+
+    //Titulo categorias
+    .cat_title {
+        margin: 2%;
+        text-align: center; 
+        font-family:$font-text;
+        font-weight: bold;
+    }
+    
+    //Boton transparente
+    .btn_tran {
+        padding: 2px 50px;
+        font-size: 1rem;
+        text-decoration: none;
+        color: rgb(58, 58, 58);
+        font-weight: bold;
+        background-color: transparent;
+        border: 2px solid rgb(106, 106, 106);
+    }
+
+    .btn_tran:hover {
+        box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.104);
+        color: #494949;
+    }
+
+    //Boton delete
+    .btn_delete {
+        padding: 2px 50px;
+        font-size: 1.6rem;
+        text-decoration: none;
+        color: rgb(60, 56, 56);
+        background-color: transparent;
+        border:none;
+        font-weight: bold;
+    }
+
+    //Texto de exito
+    .success-text {
+        text-align: center;
+        padding: 10px 20px;
+        background-color: rgba(96, 214, 145, 0.574);
+        color: rgb(30, 57, 41);
+    }
+
+    //Spinner
+    .spinner {
+        margin-top: 10%;
+        display: flex;
+        justify-content: center;
+    }
+    
+    //Home
+    @import '_home';
+    //Navbar
+    @import '_navbar';
+    //ItemListContainer
+    @import '_ItemListContainer';
+    //ItemDetailContainer
+    @import '_ItemDetail';
+    //Cart
+    @import '_Cart';
+    //Checkout
+    @import '_Checkout';

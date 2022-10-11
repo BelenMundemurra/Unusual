@@ -1,0 +1,28 @@
+//Estilos Home.jsx
+.home {
+    background-image: url(https://firebasestorage.googleapis.com/v0/b/ecommerce-react---coderhouse.appspot.com/o/imagen.png?alt=media&token=6ccf4de1-9ad3-42e6-9b10-dd1967c54c79);
+    background-size: 103% 100%;
+    height: 95vh;
+    color:$color-font-news ;
+    display: flex;
+    justify-content: end;
+    align-items: flex-end;
+    div {
+        font-size: 2rem;
+        margin: 6% 5%;
+        p {
+            font-family:$font-text;
+        }
+    }
+}
+
+//Seccion productos Home.jsx
+.home_products {
+    p {
+        margin-top: 2%;
+    }
+    div {
+        margin: 0;
+        justify-content: center;
+    }
+}

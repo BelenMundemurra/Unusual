@@ -1,0 +1,36 @@
+.navbar {
+    background-color: #F0F0F0;
+}
+
+.navbar-brand {
+    text-decoration: none;
+    margin: 1em;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.navbar-link {
+    display: flex;
+    align-items: center;
+    margin: 0px 30px;
+    li {
+
+        margin: 0px 20px;
+        color: $color-font;
+        list-style-type: none;
+    }
+}
+
+.nav-item {
+    margin: 1em;
+}
+
+.nav-cart {
+    color: $color-font;
+}
+
+//Active Link
+.active {
+    font-weight: bold;
+    color: rgb(81, 57, 57);
+}

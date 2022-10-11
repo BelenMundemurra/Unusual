@@ -24,9 +24,6 @@ export const CartProvider = ({children}) => {
     //Limpiar carrito
     const clearCart = () => setCart([]); 
 
-    //Mostrar carrito en consola
-    //console.log(cart)
-
     //Total precio
     //Resultado se acumula en prev
     const totalPrice = () => {
@@ -35,11 +32,12 @@ export const CartProvider = ({children}) => {
 
     //Total productos
     const totalProducts = () => cart.reduce((acumulador, productActual) => acumulador + productActual.amount, 0);
+
     return (
         <>
-        <CartContext.Provider value={{addItem,removeItem,isInCart,clearCart,totalPrice,totalProducts,cart}}>
-            {children}
-        </CartContext.Provider>
+            <CartContext.Provider value={{addItem,removeItem,isInCart,clearCart,totalPrice,totalProducts,cart}}>
+                {children}
+            </CartContext.Provider>
         </>
     );
 }

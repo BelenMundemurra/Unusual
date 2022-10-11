@@ -1,0 +1,23 @@
+//Estilos => ItemListContainer.jsx
+.cat-product {
+    width: 100%;
+    justify-content: center;
+}
+
+//Estilos => List de productos
+.card_title {
+    font-weight: bold;
+    padding-top: 15px;
+    font-family: $font-text;
+    font-size: 1em;
+}
+
+.card_price {   
+    padding: 0px 3px;
+    font-size: 1.1rem;  
+    font-family: $font-text;
+    color: $color-font;
+}
+.item_card {
+    padding: 23px;
+}

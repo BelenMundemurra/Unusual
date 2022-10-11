@@ -1,0 +1,51 @@
+//Detalle del producto
+.card-detail {
+    display: flex;
+    justify-content: center;
+    
+    img {
+        width: 30%;
+        padding: 0px 20px;
+    } 
+    
+    div {
+        p {
+            font-family: $font-text;
+        }
+    }
+}
+
+.card-detail-price {
+    font-size: 1.3rem;
+}
+
+//Item Count
+.stock-text {
+    font-size: 1rem;
+}
+
+.container-count {
+    margin: 0px 0px 10px 0px;
+    border: 1px solid black;
+    text-align: center;
+    width: fit-content;
+}
+
+.btn-count {
+    background-color: transparent;
+    border: none;
+    font-weight: bold;
+    width: 20px;
+}
+
+.btn-count-num {
+    padding: 0px 25px;
+    border: none;
+    border-right: 1px solid rgb(0, 0, 0);
+    border-left: 1px solid rgb(0, 0, 0);
+    background-color: transparent;
+    width: 60px;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+}
+
