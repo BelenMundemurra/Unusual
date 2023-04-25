@@ -5,7 +5,6 @@
     The styles were made using bootstrap and sass (https://sass-lang.com/).
     Firebase is used to store products and images used in the project.
 
-<<<<<<< HEAD
 ### Future changes
     It is planned to incorporate payment market api to finish developing ecommerce and incorporate payments (https://www.mercadopago.com.uy/developers/es)
 
