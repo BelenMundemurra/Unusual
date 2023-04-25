@@ -49,15 +49,6 @@ body {
   justify-content: center;
 }
 
-.home {
-  background-image: url(https://firebasestorage.googleapis.com/v0/b/ecommerce-react---coderhouse.appspot.com/o/imagen.png?alt=media&token=6ccf4de1-9ad3-42e6-9b10-dd1967c54c79);
-  background-size: 103% 100%;
-  height: 95vh;
-  color: white;
-  display: flex;
-  justify-content: end;
-  align-items: flex-end;
-}
 .home div {
   font-size: 2rem;
   margin: 6% 5%;
@@ -74,15 +65,25 @@ body {
   justify-content: center;
 }
 
+.carousel-img {
+  height: 85vh;
+  
+}
+
 .navbar {
   background-color: #F0F0F0;
+  margin: 0;
+  padding: 0;
 }
 
 .navbar-brand {
   text-decoration: none;
-  margin: 1em;
+  margin: 0.2em;
   font-size: 2rem;
   font-weight: bold;
+}
+.mb-3 {
+  margin-bottom: 0!important;
 }
 
 .navbar-link {
@@ -100,8 +101,17 @@ body {
   margin: 1em;
 }
 
-.nav-cart {
-  color: #494949;
+.navbar-toggler {
+  border: none;
+}
+
+.cart {
+  display: flex;
+}
+
+.cart-num {
+  line-height: initial;
+  padding: 0px 8px;
 }
 
 .active {
@@ -315,4 +325,25 @@ body {
   color: black;
 }
 
+
+.footer {
+  font-size: medium;
+  border-top: rgb(220, 218, 218) solid 1px;
+  background-color: rgb(242, 237, 237);
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 70px;
+}
+
+.footer p {
+  margin: 0;
+
+}
+
+.footer-logo img{
+  height: 40px;
+}
 /*# sourceMappingURL=styles.css.map */

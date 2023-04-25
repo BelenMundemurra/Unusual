@@ -4,6 +4,7 @@ import {db} from '../services/firebase';
 import {addDoc,collection} from 'firebase/firestore';
 import {Link} from 'react-router-dom';
 
+
 const Checkout = () => {
 
     const {cart,totalPrice,clearCart} = useCartContext();

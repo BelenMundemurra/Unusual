@@ -1,7 +1,7 @@
 import React from 'react';
 import {BrowserRouter,Routes,Route} from 'react-router-dom'
 import '../style/styles.css';
-import Navbar from "./Navbar";
+import NavbarComp from "./Navbar";
 import ItemListContainer from './ItemContainerComponents/ItemListContainer';
 import ItemDetailContainer from './ItemDetailComponents/ItemDetailContainer';
 import Error404 from './Error404';
@@ -9,12 +9,13 @@ import Cart from './CartComponents/Cart';
 import {CartProvider} from './context/CartContext';
 import Checkout from './CartComponents/Checkout';
 import Home from './Home/Home';
+import Footer from './Footer';
 const App = () => {
     return (
         <>
             <BrowserRouter>
                 <CartProvider>
-                    <Navbar/>
+                    <NavbarComp/>
                     <Routes>
                         <Route path='/' element={<Home/>} />
                         <Route path='/category/shop' element={<ItemListContainer/>} />
@@ -24,6 +25,7 @@ const App = () => {
                         <Route path='*' element={<Error404/>} />
                     </Routes>
                 </CartProvider>
+                <Footer/>
             </BrowserRouter>
         </>
     );
