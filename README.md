@@ -1,4 +1,4 @@
-##Ecommerce prototype made by Belén Mundemurra
+## Ecommerce prototype made by Belén Mundemurra
 
 #### 1. General information 
     Ecommerce created with React capable of adding products from the catalog to the cart, controlling the stock of products and completing a purchase form.
