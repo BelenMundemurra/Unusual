@@ -28,7 +28,6 @@ const Home = () => {
                             <p>Talles par todo tipo de cuerpos</p>
                         </Carousel.Caption>
                     </Carousel.Item>
-
                 </Carousel>
             </div>
             <div className='home_products'>
